@@ -38,7 +38,7 @@ export class CartaComponent implements OnInit {
   }
 
   showPlatoDetails(id: number){
-    this.router.navigate(['detalle', id])
+    this.router.navigate(['detalle', [id,this.local.id]])
   }
 
 }

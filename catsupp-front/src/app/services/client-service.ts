@@ -46,8 +46,8 @@ export class ClientService {
     return this.http.get<Local[]>("http://localhost:8080/locales",{ params : { q: local }});
   }
 
-  getPlatoDetalleById(id:number): Observable<any>{
-    return of(this.platos[0]);
+  getPlatoDetalleById(localId: number, platoId: number): Observable<any>{
+    return this.http.get<Plato>(this.apiURL + 'locales/' + localId + '/platos/' + platoId);
   }
 
 }
