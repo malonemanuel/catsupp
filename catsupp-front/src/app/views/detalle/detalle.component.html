@@ -1,1 +1,15 @@
-<p>detalle works!</p>
+<div fxLayoutAlign="center">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{detallePlato?.nombre}}</mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content fxLayout="row">
+            <img 
+                *ngFor="let ingrediente of detallePlato.ingredientes" 
+                [src]="ingrediente?.imagen" 
+                style="width:100px"
+            >
+        </mat-card-content>
+    </mat-card>
+</div>
