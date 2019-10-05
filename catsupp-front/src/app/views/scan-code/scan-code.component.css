@@ -6,4 +6,66 @@ zxing-scanner{
     width: 100vw;
     object-fit: contain;
 }
+div.content-foco{
+    position: fixed;
+    top:0;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+}
 
+div.content-foco .superior{
+    background-color: #26262691;
+    width: 100%;
+    height: 50%;
+    margin-top: -160px;
+
+}
+div.content-foco .central{
+    width: 100%;
+    height: 320px;
+    display:block;
+}
+div.content-foco .inferior{
+    background-color: #26262691;
+    width: 100%;
+    height: 50%;
+}
+
+div.content-foco .central .izq,
+div.content-foco .central .der{
+    background-color: #26262691;
+    display: inline-block;
+    width: calc(50% - 160px);
+    height: 100%;
+}
+div.content-foco .central .foco{
+    background-color: #ffffff00;
+    display: inline-block;
+    width: 320px;
+    height: 100%;
+}
+div.content-foco .central .foco .barra-scanner{
+    width: 100%;
+    height: 100%;
+
+    -webkit-animation: progreso 3s linear infinite;
+    animation: progreso 3s linear infinite;
+    border-bottom: 2px solid #31df5f;
+}
+@-webkit-keyframes progreso{
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 0;
+    }
+}
+@keyframes progreso{
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 0;
+    }
+}
