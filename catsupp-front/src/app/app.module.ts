@@ -11,6 +11,7 @@ import { ScanCodeComponent } from './views/scan-code/scan-code.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { BusquedaComponent } from './views/busqueda/busqueda.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DetalleComponent } from './views/detalle/detalle.component';
 
 
 
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     CartaComponent,
     ScanCodeComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
