@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -10,7 +11,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CommonModule
   ],
   exports: [
-    MatExpansionModule
+    MatExpansionModule,
+    FlexLayoutModule
   ]
 })
 export class CustomMaterialModule { }
