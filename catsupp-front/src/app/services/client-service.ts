@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Plato } from '../models/plato';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+import { Local } from '../models/local';
 
 @Injectable({
   providedIn: 'root'
@@ -26,11 +30,14 @@ export class ClientService {
     }
   ];
 
-  constructor() { }
+  apiURL : string = "http://10.5.3.10:8080/";
 
-  getPlatosByLocal(){
-    return of(this.platos);
+  constructor(private http: HttpClient) { }
+
+  getPlatosByLocal(localId: string): Observable<any>{
+    return this.http.get(this.apiURL+'locales/'+localId);
   }
-  
 
+
+    //return of(this.platos);
 }
