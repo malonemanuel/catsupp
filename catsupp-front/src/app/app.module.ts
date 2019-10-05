@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import { CartaComponent } from './views/carta/carta.component';
 import { ScanCodeComponent } from './views/scan-code/scan-code.component';
+import { BusquedaComponent } from './views/busqueda/busqueda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CartaComponent,
-    ScanCodeComponent
+    ScanCodeComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,
