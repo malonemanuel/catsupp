@@ -12,19 +12,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hackatrix.catsupp.model.LocalDTO;
 import hackatrix.catsupp.model.LocalRefDTO;
+import hackatrix.catsupp.model.PlatoDTO;
 import hackatrix.catsupp.services.LocalesService;
+import hackatrix.catsupp.services.PlatosService;
 
 @RestController
 public class LocalesResource {
 
 	private static final String BASE = "/locales";
+	private static final String PLATOS = "/platos";
 	
 	@Autowired
 	private LocalesService localesService;
+	@Autowired
+	private PlatosService platosService;
 
 	@GetMapping(path=BASE + "/{id}")
 	public LocalDTO get(@PathVariable("id") String id) {
 		return localesService.findById(id);
+	}
+	
+	@GetMapping(path=BASE + "/{idLocal}" + PLATOS + "/{idPlato}")
+	public PlatoDTO getPlato(@PathVariable("idLocal") String idLocal, @PathVariable("idPlato") String idPlato) {
+		return platosService.findById(idLocal, idPlato);
 	}
 	
 	@GetMapping(path=BASE)

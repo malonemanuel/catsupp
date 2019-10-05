@@ -1,12 +1,18 @@
 package hackatrix.catsupp.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-@AllArgsConstructor
 public class PlatoRefDTO {
-	private String id;
-	private String nombre;
-	private String href;
+	private final PlatoDTO plato;
+
+	public PlatoRefDTO(PlatoDTO plato) {
+		this.plato = plato;
+	}
+	public String getId() {
+		return plato.getId();
+	}
+	public String getNombre() {
+		return plato.getNombre();
+	}
+	public String getHref() {
+		return plato.getHref();
+	}
 }
