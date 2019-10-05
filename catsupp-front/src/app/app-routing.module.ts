@@ -5,6 +5,7 @@ import { ScanCodeComponent } from './views/scan-code/scan-code.component';
 import { BusquedaComponent } from './views/busqueda/busqueda.component';
 import { CartaComponent } from './views/carta/carta.component';
 import { HomeComponent } from './views/home/home.component';
+import { DetalleComponent } from './views/detalle/detalle.component';
 
 
 const routes: Routes = [
@@ -13,8 +14,8 @@ const routes: Routes = [
     component: HomeComponent 
   },
   { 
-    path: 'carta', 
-    component: CartaComponent 
+    path: 'carta/:local', 
+    component: CartaComponent
   },
   { 
     path: 'scan-code', 
@@ -23,6 +24,10 @@ const routes: Routes = [
   { 
     path: 'busqueda', 
     component: BusquedaComponent 
+  },
+  { 
+    path: 'detalle/:platoId', 
+    component: DetalleComponent
   }
 ];
 

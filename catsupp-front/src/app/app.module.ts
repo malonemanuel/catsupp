@@ -10,6 +10,7 @@ import { CartaComponent } from './views/carta/carta.component';
 import { ScanCodeComponent } from './views/scan-code/scan-code.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { BusquedaComponent } from './views/busqueda/busqueda.component';
+import { DetalleComponent } from './views/detalle/detalle.component';
 
 
 
@@ -19,7 +20,8 @@ import { BusquedaComponent } from './views/busqueda/busqueda.component';
     HomeComponent,
     CartaComponent,
     ScanCodeComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

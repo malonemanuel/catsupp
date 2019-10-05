@@ -9,10 +9,10 @@ export class ClientService {
 
   platos: Plato[] = [
     {
+      id: 1,
       nombre: 'Wok de Vegetales',
       descripcion: 'Salteado de verduras',
       imagen: 'assets/img/plato/wokvegetales.jpg',
-      precio: 50.50,
       ingredientes: [
         {
           nombre: 'Zanahoria',
@@ -28,8 +28,9 @@ export class ClientService {
 
   constructor() { }
 
-  getPlatos(){
+  getPlatosByLocal(){
     return of(this.platos);
   }
+  
 
 }
