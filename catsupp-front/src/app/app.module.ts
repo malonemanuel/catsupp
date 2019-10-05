@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import { CartaComponent } from './views/carta/carta.component';
 import { ScanCodeComponent } from './views/scan-code/scan-code.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,11 @@ import { ScanCodeComponent } from './views/scan-code/scan-code.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ZXingScannerModule
+  ],
+  exports: [
+    ZXingScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
