@@ -14,6 +14,7 @@ const routes: Routes = [
   },
   { 
     path: 'carta/:local', 
+    component: CartaComponent
   },
   { 
     path: 'scan-code', 
