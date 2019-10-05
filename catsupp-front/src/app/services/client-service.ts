@@ -5,7 +5,7 @@ import { Plato } from '../models/plato';
 @Injectable({
   providedIn: 'root'
 })
-export class ConsultaService {
+export class ClientService {
 
   platos: Plato[];
 
