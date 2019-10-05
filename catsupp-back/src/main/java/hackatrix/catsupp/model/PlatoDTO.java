@@ -10,6 +10,7 @@ import lombok.Data;
 public class PlatoDTO {
 	private String id;
 	private String nombre;
+	private String imagen;
 	private List<IngredienteDTO> ingredientes;
 	
 	private String href;

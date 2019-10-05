@@ -12,6 +12,9 @@ public class PlatoRefDTO {
 	public String getNombre() {
 		return plato.getNombre();
 	}
+	public String getImagen() {
+		return plato.getImagen();
+	}
 	public String getHref() {
 		return plato.getHref();
 	}
