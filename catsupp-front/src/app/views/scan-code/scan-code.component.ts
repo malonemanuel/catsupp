@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 @Component({
   selector: 'app-scan-code',
@@ -12,4 +13,7 @@ export class ScanCodeComponent implements OnInit {
   ngOnInit() {
   }
 
+  scanSuccess(idLocal: string){
+    console.log(idLocal);
+  }
 }
