@@ -1,22 +1,29 @@
-<div flexLayout="column" fxLayoutAlign="center none">
+<div fxLayoutAlign="center none">
     <mat-accordion *ngFor="let plato of platos">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{plato?.nombre}}
+            <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
+                <div 
+                    style="margin-right: 10px"
+                    mat-card-avatar 
+                    [ngStyle]="{'background-image': 'url(' + plato?.imagen + ')', 'background-size': 'cover'  }"
+                >
+                </div>
+                <div style="font-weight:bold">
+                    {{plato?.nombre}}
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
+            <mat-panel-description fxLayoutAlign="start center">
               {{plato?.descripcion}}
             </mat-panel-description>
           </mat-expansion-panel-header>
           <mat-card class="example-card">
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>{{plato?.nombre}}</mat-card-title>
-              <mat-card-subtitle>{{plato?.descripcion}}</mat-card-subtitle>
+              <mat-card-subtitle></mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image [src]="plato?.imagen" (click)="showPlatoDetails()" style="cursor:pointer">
-            <mat-card-content>
+            <img mat-card-image [src]="plato?.imagen" (click)="showPlatoDetails(plato?.id)" style="cursor:pointer">
+            <mat-card-content fxLayout="row">
                 <mat-chip-list *ngFor="let ingrediente of plato.ingredientes">
                     <mat-chip>{{ingrediente?.nombre}}</mat-chip>
                 </mat-chip-list>

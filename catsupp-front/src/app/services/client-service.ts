@@ -11,10 +11,10 @@ export class ClientService {
 
   platos: Plato[] = [
     {
+      id: 1,
       nombre: 'Wok de Vegetales',
       descripcion: 'Salteado de verduras',
       imagen: 'assets/img/plato/wokvegetales.jpg',
-      precio: 50.50,
       ingredientes: [
         {
           nombre: 'Zanahoria',
@@ -32,9 +32,10 @@ export class ClientService {
     private http:HttpClient
   ) { }
 
-  getPlatos(){
+  getPlatosByLocal(){
     return of(this.platos);
   }
+  
 
   findLocales(local:string){
     return this.http.get<Local[]>("http://localhost:8080/locales",{ params : { q: local }});
