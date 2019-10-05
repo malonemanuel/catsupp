@@ -43,7 +43,7 @@ export class ClientService {
 
 
   findLocales(local:string):Observable<Local[]>{
-    return this.http.get<Local[]>(this.apiURL+"/locales",{ params : { q: local }});
+    return this.http.get<Local[]>(this.apiURL+"locales",{ params : { q: local }});
   }
 
 
