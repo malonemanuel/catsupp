@@ -18,7 +18,7 @@ public class LocalesService {
 	private static final String KENT_BROCKMAN_NAME = "Kent Brockman";
 	
 	private static final LocalDTO KENTUCKY = new LocalDTO(KENTUCKY_ID, KENTUCKY_NAME);
-	private static final LocalDTO KENT_BROCKMAN = new LocalDTO(KENTUCKY_ID, KENTUCKY_NAME);
+	private static final LocalDTO KENT_BROCKMAN = new LocalDTO(KENT_BROCKMAN_ID, KENT_BROCKMAN_NAME);
 	private static final LocalRefDTO KENTUCKY_REF = new LocalRefDTO(KENTUCKY_ID, KENTUCKY_NAME, "http://ejemplo/locales/kentucky");
 	private static final LocalRefDTO KENT_BROCKMAN_REF = new LocalRefDTO(KENT_BROCKMAN_ID, KENT_BROCKMAN_NAME, "http://ejemplo/locales/kent_brockman");
 
