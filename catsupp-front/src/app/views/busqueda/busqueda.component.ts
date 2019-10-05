@@ -17,22 +17,6 @@ export class BusquedaComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.locales = [
-      {
-        id:'mc-donalds',
-        nombre: 'Mc Donalds'
-      },
-      {
-        id:'burger-king',
-        nombre: 'Burger King'
-      },
-      {
-        id:'wendys',
-        nombre: 'Wendy\'s'
-      }
-    ]
-
   }
 
 }
