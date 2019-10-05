@@ -2,16 +2,34 @@
     background-color: #eaeaea;
     height: 100%;
 }
-.logo{
-    padding: 3em 0em;
-    text-align: center;
-    background-color: #6969f2;
-    
+
+
+@media( min-width: 600px ){
+    img{
+        width: 15%;
+        background-color: white;
+        border-radius: 80px;
+    }    
+    .logo{
+        padding: 2em 0em;
+        text-align: center;
+        background-color: #6969f2;
+        
+    }
 }
-img{
-    width: 50%;
-    background-color: white;
-    border-radius: 80px;
+@media( max-width: 599px ){
+    img{
+        width: 50%;
+        background-color: white;
+        border-radius: 80px;
+    }    
+
+    .logo{
+        padding: 3em 0em;
+        text-align: center;
+        background-color: #6969f2;
+        
+    }
 }
 
 .contenidoHome{
