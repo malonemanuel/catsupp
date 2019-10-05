@@ -1,12 +1,15 @@
-<zxing-scanner>
-    (scanSuccess)="scanSuccessHandler($event)"
+<zxing-scanner
+    [enable]="scannerEnabled" 
+    (scanSuccess)="scanSuccessHandler($event)">>
 </zxing-scanner>
-<div>
-    <div></div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
+<div class="content-foco">
+    <div class="superior"></div>
+    <div class="central">
+        <div class="izq"></div>
+        <div class="foco">
+            <div class="barra-scanner"></div>
+        </div>
+        <div class="der"></div>
     </div>
-    <div></div>
+    <div class="inferior"></div>
 </div>

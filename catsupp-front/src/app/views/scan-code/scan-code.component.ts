@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-scan-code',
@@ -8,12 +8,15 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
 })
 export class ScanCodeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.scannerEnabled = true;
   }
 
-  scanSuccess(idLocal: string){
-    console.log(idLocal);
+  scannerEnabled : boolean;
+
+  scanSuccessHandler(idLocal: string){
+    this.router.navigate(['/carta', idLocal])
   }
 }
