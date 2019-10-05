@@ -9,6 +9,7 @@ import { DetalleComponent } from './views/detalle/detalle.component';
 
 
 const routes: Routes = [
+  
   { 
     path: 'home', 
     component: HomeComponent 
@@ -26,8 +27,12 @@ const routes: Routes = [
     component: BusquedaComponent 
   },
   { 
-    path: 'detalle/:platoId', 
+    path: 'detalle/:platoId/:localId', 
     component: DetalleComponent
+  },
+  {
+    path: '**', 
+    component: HomeComponent
   }
 ];
 

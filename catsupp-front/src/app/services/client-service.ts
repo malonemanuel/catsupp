@@ -32,7 +32,7 @@ export class ClientService {
     }
   ];
 
-  apiURL : string = "http://192.168.43.231:8080/";
+  apiURL : string = "https://192.168.43.231:8443/";
 
 
   constructor(private http: HttpClient) { }
@@ -43,11 +43,17 @@ export class ClientService {
 
 
   findLocales(local:string):Observable<Local[]>{
-    return this.http.get<Local[]>("http://localhost:8080/locales",{ params : { q: local }});
+    return this.http.get<Local[]>(this.apiURL+"locales",{ params : { q: local }});
   }
 
+
+  getPlatoDetalleById(localId: number, platoId: number): Observable<any>{
+    return this.http.get<Plato>(this.apiURL + 'locales/' + localId + '/platos/' + platoId);
+  }
+
+  /*
   getPlatoDetalleById(id:number): Observable<any>{
     return of(this.platos[0]);
   }
-
+  */
 }
