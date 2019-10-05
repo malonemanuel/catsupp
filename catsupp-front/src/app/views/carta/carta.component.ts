@@ -14,7 +14,14 @@ export class CartaComponent implements OnInit {
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    this.clientService.getPlatos()
+      .subscribe( data => {
+        this.platos = data;
+      })
+  }
 
+  showPlatoDetails(){
+    console.log("Plato detalles");
   }
 
 }
