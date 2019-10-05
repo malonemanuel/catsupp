@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Plato } from 'src/app/models/plato';
+import { ClientService } from 'src/app/services/client-service';
 
 @Component({
   selector: 'app-carta',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartaComponent implements OnInit {
 
-  constructor() { }
+  platos: Plato[];
+
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+
   }
 
 }
