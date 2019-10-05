@@ -8,8 +8,8 @@ import { CartaComponent } from './views/carta/carta.component';
 
 const routes: Routes = [
   { 
-    path: 'carta', 
-    component: CartaComponent 
+    path: 'carta/:local', 
+    component: CartaComponent
   },
   { 
     path: 'scan-code', 

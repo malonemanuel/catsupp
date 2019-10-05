@@ -28,8 +28,9 @@ export class ClientService {
 
   constructor() { }
 
-  getPlatos(){
+  getPlatosByLocal(){
     return of(this.platos);
   }
+  
 
 }
