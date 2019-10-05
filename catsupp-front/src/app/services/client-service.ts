@@ -32,7 +32,7 @@ export class ClientService {
     }
   ];
 
-  apiURL : string = "http://192.168.43.231:8080/";
+  apiURL : string = "https://192.168.43.231:8443/";
 
 
   constructor(private http: HttpClient) { }
