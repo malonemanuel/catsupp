@@ -1,1 +1,10 @@
-<p>busqueda works!</p>
+
+<mat-form-field >
+    <input type="text" placeholder="Busca tu local de comida" matInput [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let local of locales" [value]="local.id">
+        {{local.nombre}}
+    </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+  
