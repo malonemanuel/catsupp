@@ -6,7 +6,7 @@
                 <div 
                     style="margin-right: 10px"
                     mat-card-avatar 
-                    [ngStyle]="{'background-image': 'url(' + plato?.href + ')', 'background-size': 'cover'  }"
+                    [ngStyle]="{'background-image': 'url(' + plato?.imagen + ')', 'background-size': 'cover'  }"
                 >
                 </div>
                 <div style="font-weight:bold">
@@ -14,7 +14,7 @@
                 </div>
             </mat-panel-title>
             <mat-panel-description fxLayoutAlign="start center">
-              {{plato?.descripcion}}
+              {{plato?.nombre}}
             </mat-panel-description>
           </mat-expansion-panel-header>
           <mat-card class="example-card">
@@ -24,9 +24,11 @@
             </mat-card-header>
             <img mat-card-image [src]="plato?.imagen" (click)="showPlatoDetails(plato?.id)" style="cursor:pointer">
             <mat-card-content fxLayout="row">
-                <mat-chip-list *ngFor="let ingrediente of plato.ingredientes">
-                    <mat-chip>{{ingrediente?.nombre}}</mat-chip>
+              <!--  
+              <mat-chip-list *ngFor="let ingrediente of plato.ingredientes">
+                    <mat-chip>{{plato?.nombre}}</mat-chip>
                 </mat-chip-list>
+                -->
             </mat-card-content>
             <mat-card-actions>
               

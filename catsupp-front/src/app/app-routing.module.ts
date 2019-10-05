@@ -28,6 +28,10 @@ const routes: Routes = [
   { 
     path: 'detalle/:platoId', 
     component: DetalleComponent
+  },
+  { 
+    path: '**', 
+    component: HomeComponent 
   }
 ];
 
