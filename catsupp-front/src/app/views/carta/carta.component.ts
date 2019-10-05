@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Plato } from 'src/app/models/plato';
 import { ClientService } from 'src/app/services/client-service';
 
+
 import { RouterOutlet, ActivatedRoute, Router } from '@angular/router';
 import { Local } from 'src/app/models/local';
+
 
 @Component({
   selector: 'app-carta',
@@ -14,14 +16,14 @@ export class CartaComponent implements OnInit {
 
   local: Local;
 
-  constructor(private clientService: ClientService, private router: ActivatedRoute, private route: Router) { }
+  constructor(private clientService: ClientService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     let localId = this.route.snapshot.params.local;
     this.local = {
       id:null,
       nombre:'',
-      platos:[]
+      platos: []
       
     };
     this.clientService.getPlatosByLocal(localId)
@@ -37,7 +39,7 @@ export class CartaComponent implements OnInit {
   }
 
   showPlatoDetails(id: number){
-    this.route.navigate(['detalle', id])
+    this.router.navigate(['detalle', id])
   }
 
 }
