@@ -22,7 +22,7 @@ export class ClientService {
       ingredientes: [
         {
           nombre: 'Zanahoria',
-          imagen: 'assets/img/ingrediente/zanahoria.jpg'
+          imagen: 'assets/img/ingrediente/zanahoria.png'
         },
         {
           nombre: 'Cebolla',
