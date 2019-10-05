@@ -17,6 +17,7 @@ export class ScanCodeComponent implements OnInit {
   scannerEnabled : boolean;
 
   scanSuccessHandler(idLocal: string){
+    console.log(idLocal);
     this.router.navigate(['/carta', idLocal])
   }
 }

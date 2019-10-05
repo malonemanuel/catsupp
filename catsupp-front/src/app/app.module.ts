@@ -11,9 +11,10 @@ import { ScanCodeComponent } from './views/scan-code/scan-code.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { BusquedaComponent } from './views/busqueda/busqueda.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { DetalleComponent } from './views/detalle/detalle.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BusquedaLocalComponent } from './components/busqueda-local/busqueda-local.component';
 
 

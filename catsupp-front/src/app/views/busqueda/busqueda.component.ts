@@ -13,6 +13,11 @@ import { Router } from '@angular/router';
 })
 export class BusquedaComponent implements OnInit {
 
- 
+ constructor(){}
+
+ ngOnInit(){
+   
+ }
+
 
 }
