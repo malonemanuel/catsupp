@@ -7,7 +7,10 @@ import { CartaComponent } from './views/carta/carta.component';
 
 
 const routes: Routes = [
-  { path: '**', component: CartaComponent },
+  { 
+    path: 'carta', 
+    component: CartaComponent 
+  },
   { 
     path: 'scan-code', 
     component: ScanCodeComponent 
