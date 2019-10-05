@@ -1,13 +1,18 @@
 package hackatrix.catsupp.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-@AllArgsConstructor
 public class LocalRefDTO
 {
-	private String id;
-	private String nombre;
-	private String href;
+	private final LocalDTO localDTO;
+	public LocalRefDTO(LocalDTO localDTO) {
+		this.localDTO = localDTO;
+	}
+	public String getId() {
+		return this.localDTO.getId();
+	}
+	public String getNombre() {
+		return this.localDTO.getNombre();
+	}
+	public String getHref() {
+		return this.localDTO.getHref();
+	}
 }

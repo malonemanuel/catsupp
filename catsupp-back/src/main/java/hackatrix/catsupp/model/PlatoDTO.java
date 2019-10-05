@@ -7,9 +7,10 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class LocalDTO {
+public class PlatoDTO {
 	private String id;
 	private String nombre;
-	private List<PlatoRefDTO> platos;
+	private List<IngredienteDTO> ingredientes;
+	
 	private String href;
 }

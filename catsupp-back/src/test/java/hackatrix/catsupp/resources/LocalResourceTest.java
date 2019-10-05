@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import hackatrix.catsupp.Application;
+import static hackatrix.catsupp.services.Constantes.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
@@ -41,12 +42,12 @@ public class LocalResourceTest {
 					+ "{"
 					+ "\"id\": \"pizza_muzzarella\","
 					+ "\"nombre\": \"Pizza de Muzzarella\","
-					+ "\"href\": \"http://ejemplo/locales/kentucky/platos/pizza_muzzarella\""
+					+ "\"href\": \"http://" + HOST + ":8080/locales/kentucky/platos/pizza_muzzarella\""
 					+ "},"
 					+ "{"
 					+ "\"id\": \"pizza_fugazzeta\","
 					+ "\"nombre\": \"Pizza de Fugazzeta\","
-					+ "\"href\": \"http://ejemplo/locales/kentucky/platos/pizza_fugazzeta\""
+					+ "\"href\": \"http://" + HOST + ":8080/locales/kentucky/platos/pizza_fugazzeta\""
 					+ "}"
 				+ "]"
 				+ "}"))
@@ -70,12 +71,12 @@ public class LocalResourceTest {
 				+ "{"
 				+ "\"id\": \"kentucky\","
 				+ "\"nombre\": \"Kentucky\","
-				+ "\"href\": \"http://ejemplo/locales/kentucky\""
+				+ "\"href\": \"http://" + HOST + ":8080/locales/kentucky\""
 				+ "},"
 				+ "{"
 				+ "\"id\": \"kent_brockman\","
 				+ "\"nombre\": \"Kent Brockman\","
-				+ "\"href\": \"http://ejemplo/locales/kent_brockman\""
+				+ "\"href\": \"http://" + HOST + ":8080/locales/kent_brockman\""
 				+ "}"
 				+ "]"))
 		;
@@ -90,7 +91,7 @@ public class LocalResourceTest {
 				+ "{"
 				+ "\"id\": \"kent_brockman\","
 				+ "\"nombre\": \"Kent Brockman\","
-				+ "\"href\": \"http://ejemplo/locales/kent_brockman\""
+				+ "\"href\": \"http://" + HOST + ":8080/locales/kent_brockman\""
 				+ "}"
 				+ "]"))
 		;
