@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
 import { Plato } from '../models/plato';
+
+import { HttpClient } from '@angular/common/http';
+
+import { retry, catchError } from 'rxjs/operators';
+
+import { Local } from '../models/local';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +22,7 @@ export class ClientService {
       ingredientes: [
         {
           nombre: 'Zanahoria',
-          imagen: 'assets/img/ingrediente/zanahoria.jpg'
+          imagen: 'assets/img/ingrediente/zanahoria.png'
         },
         {
           nombre: 'Cebolla',
@@ -26,11 +32,22 @@ export class ClientService {
     }
   ];
 
-  constructor() { }
+  apiURL : string = "http://192.168.43.231:8080/";
 
-  getPlatosByLocal(){
-    return of(this.platos);
+
+  constructor(private http: HttpClient) { }
+
+  getPlatosByLocal(localId: string): Observable<any>{
+    return this.http.get(this.apiURL+'locales/'+localId);
   }
-  
+
+
+  findLocales(local:string):Observable<Local[]>{
+    return this.http.get<Local[]>("http://localhost:8080/locales",{ params : { q: local }});
+  }
+
+  getPlatoDetalleById(id:number): Observable<any>{
+    return of(this.platos[0]);
+  }
 
 }

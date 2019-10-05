@@ -1,12 +1,12 @@
 <div fxLayoutAlign="center none">
-    <mat-accordion *ngFor="let plato of platos">
+    <mat-accordion *ngFor="let plato of local?.platos">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title fxLayout="row" fxLayoutAlign="start center">
                 <div 
                     style="margin-right: 10px"
                     mat-card-avatar 
-                    [ngStyle]="{'background-image': 'url(' + plato?.imagen + ')', 'background-size': 'cover'  }"
+                    [ngStyle]="{'background-image': 'url(' + plato?.href + ')', 'background-size': 'cover'  }"
                 >
                 </div>
                 <div style="font-weight:bold">

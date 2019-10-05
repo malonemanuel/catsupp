@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Local } from 'src/app/models/local';
 
 @Component({
   selector: 'app-busqueda',
@@ -8,31 +7,10 @@ import { Local } from 'src/app/models/local';
 })
 export class BusquedaComponent implements OnInit {
 
-  private locales:Local[]
+ constructor(){}
 
-  constructor(
+ ngOnInit(){
 
-  ) {
-
-  }
-
-  ngOnInit() {
-
-    this.locales = [
-      {
-        id:'mc-donalds',
-        nombre: 'Mc Donalds'
-      },
-      {
-        id:'burger-king',
-        nombre: 'Burger King'
-      },
-      {
-        id:'wendys',
-        nombre: 'Wendy\'s'
-      }
-    ]
-
-  }
+ }
 
 }
