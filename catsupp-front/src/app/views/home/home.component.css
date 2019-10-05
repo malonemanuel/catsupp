@@ -1,0 +1,28 @@
+.contenedor-principal{
+    background-color: #eaeaea;
+    height: 100%;
+}
+.logo{
+    padding: 3em 0em;
+    text-align: center;
+    background-color: #6969f2;
+    
+}
+img{
+    width: 50%;
+    background-color: white;
+    border-radius: 80px;
+}
+
+.contenidoHome{
+    text-align: center;
+    padding-top: 1em;
+    
+}
+.contenidoHome .buttons{
+    padding-top: 1em;
+}
+
+button{
+    margin-bottom: 1em;
+}

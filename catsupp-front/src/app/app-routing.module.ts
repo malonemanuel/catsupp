@@ -4,12 +4,16 @@ import { ScanCodeComponent } from './views/scan-code/scan-code.component';
 
 import { BusquedaComponent } from './views/busqueda/busqueda.component';
 import { CartaComponent } from './views/carta/carta.component';
+import { HomeComponent } from './views/home/home.component';
 
 
 const routes: Routes = [
   { 
+    path: 'home', 
+    component: HomeComponent 
+  },
+  { 
     path: 'carta/:local', 
-    component: CartaComponent
   },
   { 
     path: 'scan-code', 
