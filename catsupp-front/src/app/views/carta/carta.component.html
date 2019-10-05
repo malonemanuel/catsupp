@@ -22,7 +22,7 @@
               <mat-card-title>{{plato?.nombre}}</mat-card-title>
               <mat-card-subtitle></mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image [src]="plato?.imagen" (click)="showPlatoDetails()" style="cursor:pointer">
+            <img mat-card-image [src]="plato?.imagen" (click)="showPlatoDetails(plato?.id)" style="cursor:pointer">
             <mat-card-content fxLayout="row">
                 <mat-chip-list *ngFor="let ingrediente of plato.ingredientes">
                     <mat-chip>{{ingrediente?.nombre}}</mat-chip>
