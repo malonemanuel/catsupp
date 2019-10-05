@@ -46,8 +46,9 @@ export class ClientService {
     return this.http.get<Local[]>(this.apiURL+"/locales",{ params : { q: local }});
   }
 
-  getPlatoDetalleById(id:number): Observable<any>{
-    return this.http.get<Local[]>(this.apiURL+"/locales");
+
+  getPlatoDetalleById(localId: number, platoId: number): Observable<any>{
+    return this.http.get<Plato>(this.apiURL + 'locales/' + localId + '/platos/' + platoId);
   }
 
   /*

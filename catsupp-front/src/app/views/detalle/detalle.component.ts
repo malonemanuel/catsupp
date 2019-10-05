@@ -11,14 +11,16 @@ import { Plato } from 'src/app/models/plato';
 export class DetalleComponent implements OnInit {
 
   platoId: number;
+  localId: number;
   detallePlato: Plato;
 
   constructor(private router: ActivatedRoute, private clientService: ClientService) {
     this.platoId = this.router.snapshot.params.platoId;
+    this.localId = this.router.snapshot.params.localId;
    }
 
   ngOnInit() {
-    this.clientService.getPlatoDetalleById(this.platoId)
+    this.clientService.getPlatoDetalleById(this.localId, this.platoId)
       .subscribe( data => {
         this.detallePlato = data;
       })
