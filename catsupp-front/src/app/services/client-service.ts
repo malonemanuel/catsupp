@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Plato } from '../models/plato';
+import { HttpClient } from '@angular/common/http';
+import { Local } from '../models/local';
 
 @Injectable({
   providedIn: 'root'
@@ -26,10 +28,16 @@ export class ClientService {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private http:HttpClient
+  ) { }
 
   getPlatos(){
     return of(this.platos);
+  }
+
+  findLocales(local:string){
+    return this.http.get<Local[]>("http://localhost:8080/locales",{ params : { q: local }});
   }
 
 }
