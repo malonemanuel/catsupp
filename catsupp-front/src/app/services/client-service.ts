@@ -22,7 +22,7 @@ export class ClientService {
       ingredientes: [
         {
           nombre: 'Zanahoria',
-          imagen: 'assets/img/ingrediente/zanahoria.jpg'
+          imagen: 'assets/img/ingrediente/zanahoria.png'
         },
         {
           nombre: 'Cebolla',
@@ -44,6 +44,10 @@ export class ClientService {
 
   findLocales(local:string):Observable<Local[]>{
     return this.http.get<Local[]>("http://localhost:8080/locales",{ params : { q: local }});
+  }
+
+  getPlatoDetalleById(id:number): Observable<any>{
+    return of(this.platos[0]);
   }
 
 }

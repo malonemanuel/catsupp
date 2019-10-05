@@ -64,6 +64,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "sslKey": "<relative path from angular.json>/server.key",
+            "sslCert": "<relative path from angular.json>/server.crt",
+
             "browserTarget": "catsupp-front:build"
           },
           "configurations": {

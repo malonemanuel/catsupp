@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Plato } from 'src/app/models/plato';
 import { ClientService } from 'src/app/services/client-service';
 
 
-import { RouterOutlet, ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Local } from 'src/app/models/local';
 
 
