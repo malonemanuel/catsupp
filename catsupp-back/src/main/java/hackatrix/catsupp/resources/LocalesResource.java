@@ -1,5 +1,7 @@
 package hackatrix.catsupp.resources;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +28,8 @@ public class LocalesResource {
 	}
 	
 	@GetMapping(path=BASE)
-	public List<LocalRefDTO> find(@RequestParam("q") String query) {
+	public List<LocalRefDTO> find(@RequestParam(value="q", required=true) String queryEnc) {
+		String query = URLDecoder.decode(queryEnc, StandardCharsets.UTF_8);
 		return localesService.findByNameApproximate(query);
 	}
 	
